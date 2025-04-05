@@ -1,0 +1,26 @@
+ESP32 and Components Connection Diagram
+=====================================
+
++---------------+          +-----------------+
+|    ESP32      |          |  NEO-6M GPS    |
+|               |          |                 |
+|           3.3V|----------| VCC            |
+|            GND|----------| GND            |
+|    GPIO16(RX2)|----------| TX             |
+|    GPIO17(TX2)|----------| RX             |
+|               |          |                 |
+|         GPIO25|          +-----------------+
+|               |
+|               |          +-----------------+
+|               |          |    Buzzer       |
+|               |          |                 |
+|         GPIO25|----------| VCC            |
+|            GND|----------| GND            |
+|               |          |                 |
++---------------+          +-----------------+
+
+Notes:
+- Use 3.3V power supply
+- Keep GPS antenna with clear view of sky
+- Buzzer polarity matters (longer leg is VCC)
+- Add 100μF capacitor between VCC and GND for stability
